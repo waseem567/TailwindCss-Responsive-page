@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- fav icon -->
+      <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+      <script src="https://cdn.tailwindcss.com"></script>
+      <title>Day 6</title>
+      <style>
+         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Libre+Franklin:wght@300&display=swap');
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+         body {
+         background-color: hsl(0, 100%, 74%); 
+         background-image: url(./images/bg-intro-desktop.png); 
+         background-size: cover;
+         background-position: center;
+         position: relative;
+         z-index: -1;
+         }
+         .font {
+         font-family: 'Inter', sans-serif;
+         font-family: 'Libre Franklin', sans-serif;
+         }
+         .f-pop{
+            font-family: 'Poppins', sans-serif;
+         }
+         .btn-bg{
+         background: hsl(154, 59%, 51%) !important;
+         }
+         .bg{
+         background: hsl(248, 32%, 49%);
+         }
+         .box-shadow{
+         box-shadow: 0px 5px 2px 0px rgba(57,52,130,0.65);
+         -webkit-box-shadow: 0px 5px 2px 0px rgba(57,52,130,0.65);
+         -moz-box-shadow: 0px 5px 2px 0px rgba(57,52,130,0.65);
+         }
+         .form-shadow{
+         box-shadow: 0px 5px 2px 0px rgba(179,179,186,0.65);
+         -webkit-box-shadow: 0px 5px 2px 0px rgba(179,179,186,0.65);
+         -moz-box-shadow: 0px 5px 2px 0px rgba(179,179,186,0.65);
+         }
+         .b-red{
+         border: 2px solid rgb(250, 17, 17) !important;
+         }
+         .d-none{
+         display: none;
+         }
+         .d-unset{
+         display: unset !important;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- overall wrapper starts -->
+      <div class="py-5 lg:grid lg:grid-cols-2 lg:justify-center lg:items-center lg:gap-2 lg:w-10/12 mx-auto md:h-screen container px-2">
+         <div class="h-fit px-3 lg:px-16 lg:justify-center lg:items-center">
+            <!-- bold text -->
+            <h1 class="text-white text-3xl lg:text-[50px] text-center lg:text-start font-bold leading-[3.8rem] pt-4 f-pop" id="typing-effect"></h1>
+            <!-- small text -->
+            <p class="pt-3 text-white text-center lg:text-start lg:pt-11 md:text-[16px] font-medium font pb-4">See how experienced developers solve problems in
+               real-time. Watching scripted tutorial is great but understanding how developers think is invalueable.
+            </p>
+         </div>
+         <div class="h-full lg:flex lg:justify-center lg:flex-col">
+            <!-- blue button -->
+            <button class="block bg rounded-lg text-center px-10 py-3 lg:py-5 text-white  mx-3 shadow-blue-950 text-[16px] font  box-shadow hover:opacity-90">
+               <span class="font-bold">Try it free 7 days </span>then 20$/month thereafter.
+            </button>
+            <!-- blue button ends here -->
+            <!-- form wrapper -->
+            <div class="h-fit pt-6 lg:pt-0 px-3">
+                <!-- form -->
+               <form method="get" id="form" class="bg-white flex flex-col gap-4 p-3 lg:p-4 rounded-lg z-10 h-full lg:mt-5 form-shadow lg:gap-4" >
+                  <div class="flex justify-end flex-col">
+                     <div class="relative w-full">
+                        <input class="focus:outline-none p-4 md:border-2 border block w-full md:rounded-md rounded font-bold" type="text" placeholder="First Name" id="input1">
+                        <img class="absolute hidden top-[50%] right-3 translate-y-[-50%] h-[35px] w-[35px]" id="error1" src="./images/icon-error.svg" alt="error svg">
+                     </div>
+                     <p id="err-text1" class="text-end text-red-500 font text-[15px] font-light italic hidden w-full">First name cannot be empty</p>
+                  </div>
+                  <div class="flex justify-end flex-col">
+                     <div class="relative w-full">
+                        <input class="focus:outline-none p-4 md:border-2 border block w-full md:rounded-md rounded font-bold" type="text" placeholder="Last Name" id="input2">
+                        <img class="absolute hidden top-[50%] right-3 translate-y-[-50%] h-[35px] w-[35px]" id="error2" src="./images/icon-error.svg" alt="error svg">
+                     </div>
+                     <p id="err-text2" class="text-end text-red-500 font text-[15px] font-light italic hidden">Last name cannot be empty</p>
+                  </div>
+                  <div class="flex justify-end flex-col">
+                     <div class="relative w-full">
+                        <input class="focus:outline-none p-4 md:border-2 border block w-full md:rounded-md rounded font-bold" type="text" placeholder="Email" id="input3">
+                        <img class="absolute hidden top-[50%] right-3 translate-y-[-50%] h-[35px] w-[35px]" id="error3" src="./images/icon-error.svg" alt="error svg">
+                     </div>
+                     <p id="err-text3" class="text-end text-red-500 font text-[15px] font-light italic hidden">Email is invalid</p>
+                  </div>
+                  <div class="flex justify-end flex-col">
+                     <div class="relative w-full"> 
+                        <input class="focus:outline-none p-4 md:border-2 border block w-full md:rounded-md rounded font-bold" type="text" placeholder="Password" id="input4">
+                        <img class="absolute hidden top-[50%] right-3 translate-y-[-50%] h-[35px] w-[35px]" id="error4" src="./images/icon-error.svg" alt="error svg">
+                     </div>
+                     <p id="err-text4" class="text-end text-red-500 font text-[15px] font-light italic hidden">Password cannot be empty</p>
+                  </div>
+                  <button class="block w-full btn-bg rounded-md p-4 font-medium text-white hover:opacity-80" type="submit" >CLAIM YOUR FREE TRIAL</button>
+                  <p class="text-gray-600 text-center text-sm">By clicking the button you are agreeing to our <a href=""><span class="text-red-700 font-semibold">Terms and Policy</span></a></p>
+               </form>
+               <!-- form ends -->
+            </div>
+            <!-- form wrapper ends here -->
+         </div>
+      </div>
+      <script>
+        // live typing effect
+        const text = "Learn to code by watching others!";
+        const typingDiv = document.getElementById('typing-effect');
+        let i = 0;
+        function typeText() {
+            if (i < text.length) {
+            typingDiv.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeText, 100);
+            }
+        }
+        // function call
+        typeText();
+         // inputs dom elements
+         const input1 = document.getElementById("input1");
+         const input2 = document.getElementById("input2");
+         const input3 = document.getElementById("input3");
+         const input4 = document.getElementById("input4");
+         // error icon reference
+         const error1 = document.getElementById("error1");
+         const error2 = document.getElementById("error2");
+         const error3 = document.getElementById("error3");
+         const error4 = document.getElementById("error4");
+         // error text reference
+         const err1 = document.getElementById("err-text1");
+         const err2 = document.getElementById("err-text2");
+         const err3 = document.getElementById("err-text3");
+         const err4 = document.getElementById("err-text4");
+         
+         document.getElementById('form').addEventListener('submit', function(event) {
+         event.preventDefault();
+         // Fname input error handling
+         if(input1.value == ""){
+         input1.classList.add("b-red");
+         error1.classList.add("d-unset");
+         err1.classList.add("d-unset");
+         }else{
+         input1.classList.remove("b-red");
+         error1.classList.remove("d-unset");
+         err1.classList.remove("d-unset");
+         }
+         // Lname input error handling
+         if(input2.value == ""){
+         input2.classList.add("b-red");
+         error2.classList.add("d-unset");
+         err2.classList.add("d-unset");
+         }else{
+         input2.classList.remove("b-red");
+         error2.classList.remove("d-unset");
+         err2.classList.remove("d-unset");
+         }
+         // email input error handling
+         if(!input3.value.includes("@")){
+         input3.classList.add("b-red");
+         error3.classList.add("d-unset");
+         err3.classList.add("d-unset");
+         }else{
+         input3.classList.remove("b-red");
+         error3.classList.remove("d-unset");
+         err3.classList.remove("d-unset");
+         }
+         // password input error handling
+         if(input4.value == ""){
+         input4.classList.add("b-red");
+         error4.classList.add("d-unset");
+         err4.classList.add("d-unset");
+         }else{
+         input4.classList.remove("b-red");
+         error4.classList.remove("d-unset");
+         err4.classList.remove("d-unset");
+         }
+         }); 
+      </script>
+   </body>
+</html>
